@@ -3,7 +3,7 @@ const router = express.Router()
 
 const siteController  = require('../app/controllers/SiteController')
 
-router.use('/contact', siteController.contact)
-router.use('/',siteController.home)
-
+router.get('/contact', siteController.contact)
+router.get('/',siteController.home)
+router.post('/',siteController.account)
 module.exports = router

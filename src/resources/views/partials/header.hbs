@@ -1,4 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <div class="header">
+        <div class="header-nav">
+            <ul class="nav-menu">
+                <li><a href="#"><i class="fas fa-bed"></i>Logo</a></li>
+                <li><a href="#rooms">Khách sạn</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+            <div class="nav-mobile"><i class="fas fa-bars"></i></div>
+            <div class="moblie-menu">
+                <div class="btn-close"><i class="fas fa-times"></i></div>
+                <ul class="menu-mobi">
+                    <li><a href="#rooms" class="event-close">Khách sạn</a></li>
+                    <li><a href="#about" class="event-close">Giới thiệu</a></li>
+                    <li><a href="#contact" class="event-close">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="nav-select"><button class="btn-dn">Đăng nhập</button></div> 
+        </div>
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div id="modal-bg">
+          <div class="modal-account">
+            <div class="account-heading">Đăng nhập (admin)</div>
+            <div class="account-close"><i class="fas fa-times"></i></div>
+          
+          <div class="account-submit">
+            <form method="POST">
+              <label for="name">Tên đăng nhập</label>
+              <input type="text" id="name"name="name" placeholder="Email">
+              <label for="pws">Password</label>
+              <input type="password" id="pws" name="password"placeholder="Password">
+              <button type="submit" class= "btn btn-primary account-btn">Đăng nhập</button>
+            </form>
+          </div>
+          </div>
+        </div>
+       
+</div>
+
+
+
+
+
+
+
+
+{{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,4 +67,4 @@
       </form>
     </div>
   </div>
-</nav>
+</nav> --}}

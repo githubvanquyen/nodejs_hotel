@@ -1,7 +1,29 @@
 <div class="container  mt-4">
-    <form method="GET">
-        <label for="search">Tìm kiếm</label>
-        <input type="text" name="q" placeholder="nhập từ khóa">
-        <button type="submit">Tìm kiếm</button>
-    </form>
+    <div class="row ">
+        <div id="list-example" class="list-group col col-sm-0 col-lg-3 mt-4 mb-4">
+            <a class="list-group-item list-group-item-action" href="#list-item-1">ảnh</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2">Loại phòng</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3">Các dịch vụ</a>
+        
+        </div>
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example col col-sm-12 col-lg-9 mt-4 mb-4" tabindex="0">
+            <h4 id="list-item-1">ảnh</h4>
+            <div class="row">
+                <div class="col col-sm-12 col-lg-6">
+                    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col col-sm-12 col-lg-6">
+                    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <h4 id="list-item-2">Loại phòng</h4>
+            <div>
+                Phòng đơn (dành cho 1 người)
+            </div>
+            <h4 id="list-item-3">Các dịch vụ</h4>
+            <div>
+                Bình nước nóng, wifi, điện thoại bàn
+            </div>
+        </div>
+    </div>
 </div>

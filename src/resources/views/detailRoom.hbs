@@ -1,0 +1,35 @@
+<div class="container  mt-4">
+    <div class="row ">
+        <div id="list-example" class="list-group col col-sm-0 col-12 col-lg-3 mt-4 mb-4">
+            <a class="list-group-item list-group-item-action" href="#list-item-1">Thông tin</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2">Các dịch vụ </a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3">Liên hệ</a>
+        
+        </div>
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example col col-sm-12 col-12 col-lg-9 mt-4 mb-4" tabindex="0">
+            <h4 id="list-item-1">Thông tin phòng</h4>
+            <div>
+                Lạo phòng: {{detailRoom.typeRoom}}                                                                                                               
+            </div>
+            <div class="row">
+                <div class="col col-sm-12 col-12 col-lg-6">
+                    <img src="{{detailRoom.image}}" class="img-fluid" alt="">
+                </div>
+                <div class="col col-sm-12 col-12 col-lg-6">
+                    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            
+            <div>
+                {{detailRoom.decription}}
+            </div>
+            <div>
+                {{detailRoom.price}}
+            </div>
+            <h4 id="list-item-2">Loại phòng</h4>
+            
+            <h4 id="list-item-3">Các dịch vụ</h4>
+            
+        </div>
+    </div>
+</div>
