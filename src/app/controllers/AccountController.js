@@ -4,7 +4,7 @@ class AccountController{
 
     //GET /Account
     index(req, res, next) {
-        res.send('day là trang account')
+        
     }
     
    

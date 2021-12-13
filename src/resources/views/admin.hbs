@@ -1,7 +1,7 @@
-    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="img-fluid" alt="">
+<div class="container-fluid">
+    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="" alt="">
+</div>
 <div class="container ">
-
-
     <div>
         <h2>Kiểu Phòng</h2>
         <p>"Làm cho bạn như ở nhà" là khẩu hiệu của chúng tôi. Chúng tôi cung cấp những trang thiết bị tót nhất đe lại trải nghiệm tốt nhất. Ngủ ngon và nghỉ ngơi thật tốt !.</p>
@@ -10,11 +10,11 @@
         {{#each Rooms}}
             <div class="col col-sm-12 col-12 col-lg-4 mt-4 mb-4">
             <div class="card text-center" style="width: 100%">
-            <img src="{{this.image}}" class="card-img-top" alt="...">
+            <img src="http://localhost:3000/imgs/{{this.image}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h3 class="card-title">{{this.typeRoom}}</h3>
                 <h5 class="card-title">{{this.price}}</h5>
-                <p class="card-text">{{this.decription}}</p>
+                <p class="card-text">{{this.description}}</p>
                 <a href="/rooms/{{this.slug}}" class="btn btn-primary">Xem chi tiết</a><a href="#" class="btn btn-danger">Đặt ngay</a>
             </div>
             </div>

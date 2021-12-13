@@ -1,0 +1,47 @@
+<div class="container pt-4">
+  <div class="row mt-3 mb-4">
+      <h2>Thông tin cũ của phòng</h2>
+  </div>
+  <form method="POST" enctype="multipart/form-data">
+    <div class="row ">
+      <div class="mb-3 col-lg-6 ">
+    <label for="name" class="form-label">Tên phòng</label>
+    <input type="text" class="form-control" id="name" name="typeRoom" value="{{roomUpdate.typeRoom}}" placeholder="Tên khách sạn">
+  </div>
+  <div class="mb-3 col-lg-6 ">
+    <div class="row">
+      <div class="col col-lg-3">
+        <img src="http://localhost:3000/imgs/{{roomUpdate.image}}" alt="{{roomUpdate.typeRoom}}" width="100%">
+      </div>
+      <div class="col col-lg-9">
+        <label for="image" class="form-label">ảnh phòng</label>
+        <input type="file" class="form-control" id="image" name="upload"  multiple="multiple">
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+      <div class="mb-3 col-lg-6">
+      <label for="price" class="form-label">Giá phòng</label>
+      <input type="text" class="form-control" id="price" name="price" value="{{roomUpdate.price}}" placeholder="VND / ngày" >
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label for="area" class="form-label">Diện tích phòng</label>
+      <input type="text" class="form-control" id="area" name="areaRoom" value="{{roomUpdate.areaRoom}}" placeholder="mét vuông" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col-lg-6">
+      <label for="description" class="form-label">Mô tả</label>
+      <textarea class="form-control" id="description" name="description" placeholder="Mô tả về phòng">{{roomUpdate.description}}</textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col-lg-12">
+      <label for="exts" class="form-label">Tiện ích</label>
+      <input type="text" class="form-control" id="exts" name="extension" value="{{roomUpdate.extension}}" placeholder="Các trang thiết bị">
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Cập nhật</button>
+  </form>
+</div>

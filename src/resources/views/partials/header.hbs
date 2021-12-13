@@ -1,7 +1,7 @@
  <div class="header">
         <div class="header-nav">
             <ul class="nav-menu">
-                <li><a href="#"><i class="fas fa-bed"></i>Logo</a></li>
+                <li><a href="#"><i class="fas fa-bed"></i>Hanoi Central Hotel</a></li>
                 <li><a href="#rooms">Khách sạn</a></li>
                 <li><a href="#about">Giới thiệu</a></li>
                 <li><a href="#contact">Liên Hệ</a></li>
@@ -15,18 +15,22 @@
                     <li><a href="#contact" class="event-close">Liên hệ</a></li>
                 </ul>
             </div>
-            <div class="nav-select"><button class="btn-dn">Đăng nhập</button></div> 
+            
+            <div class="nav-select">
+              <button class="btn-dk">Đăng kí</button>
+              <button class="btn-dn">Đăng nhập</button>
+            </div> 
         </div>
         <!-- Button trigger modal -->
 
         <!-- Modal -->
         <div id="modal-bg">
-          <div class="modal-account">
-            <div class="account-heading">Đăng nhập (admin)</div>
+          <div class="modal-account col-lg-5 col-sm-10">
+            <div class="account-heading">Đăng nhập</div>
             <div class="account-close"><i class="fas fa-times"></i></div>
           
           <div class="account-submit">
-            <form method="POST">
+            <form method="POST" action="\admin">
               <label for="name">Tên đăng nhập</label>
               <input type="text" id="name"name="name" placeholder="Email">
               <label for="pws">Password</label>

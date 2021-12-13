@@ -1,25 +1,69 @@
-    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="img-fluid" alt="">
-<div class="container ">
+<div class="container-fluid">
+    <img src="https://www.w3schools.com/w3images/hotel.jpg" class="" alt="">
+</div>
+<div class="container">
+    <div class="row">
+        <form class="row gy-2 gx-3 align-items-center">
+        <div class="col col-sm-12 col-lg-3">
+            <label class="visually-hidden" for="autoSizingInput">Bạn muốn đến đâu</label>
+            <input type="text" class="form-control" id="autoSizingInput" placeholder="Bạn muốn đến đâu ?">
+        </div>
+        <div class="col col-sm-6 col-lg-6">
+            <label class="visually-hidden" for="autoSizingInputGroup">thời gian</label>
+            <div class="input-group">
+            <div class="input-group-text">Nhận phòng</div>
+            <input type="datetime-local" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+            <div class="input-group-text">Trả phòng</div>
+            <input type="datetime-local" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+            </div>
+        </div>
+        <div class="col col-sm-6 col-lg-2">
+            <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+            <select class="form-select" id="autoSizingSelect">
+            <option selected>2 người lớn</option>
+            <option value="1">1 người lớn</option>
+            <option value="2">2 người lớn - 1 trẻ em</option>
+            <option value="3">Hộ gia đình</option>
+            <option value="4">Khác</option>
+            </select>
+        </div>
+        <div class="col col-sm-12 col-lg-1 text-center">
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </div>
+        </form>
+    </div>
 
-
-    <div>
-        <h2>Kiểu Phòng</h2>
+    <div class="pt-3 pb-2">
+        <h2 class="pb-2">Các phòng còn trống</h2>
         <p>"Làm cho bạn như ở nhà" là khẩu hiệu của chúng tôi. Chúng tôi cung cấp những trang thiết bị tót nhất đe lại trải nghiệm tốt nhất. Ngủ ngon và nghỉ ngơi thật tốt !.</p>
     </div>
     <div class="row">
         {{#each Rooms}}
             <div class="col col-sm-12 col-12 col-lg-4 mt-4 mb-4">
-            <div class="card text-center" style="width: 100%">
-            <img src="{{this.image}}" class="card-img-top" alt="...">
+            <div class="card" style="width: 100%">
+            <img src="http://localhost:3000/imgs/{{this.image}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h3 class="card-title">{{this.typeRoom}}</h3>
-                <h5 class="card-title">{{this.price}}</h5>
-                <p class="card-text">{{this.decription}}</p>
+                <div class="row">
+                    <div class="col col-10">
+                        <h4 class="card-title">{{this.typeRoom}}</h4>
+                        <p class="card-title">VND {{this.price}}</p>
+                    </div>
+                    <div class="col col-2">
+                        <p>{{this.areaRoom}} m<sup>2</sup></p>
+                    </div>
+                </div>
                 <a href="/rooms/{{this.slug}}" class="btn btn-primary">Xem chi tiết</a><a href="#" class="btn btn-danger">Đặt ngay</a>
             </div>
             </div>
         </div>
         {{/each}}
+    </div>
+    <div class="row">
+        <div class="col col-lg-12 col-sm-12 h3 text-center">Những lý do để chọn Hanoi Central Hotel</div>
+        <div class="col col-lg-3 col-sm-6 h6 mt-2 mb-5 text-center reason"><i class="fas fa-wallet"></i>Giá Không thể tốt hơn</div>
+        <div class="col col-lg-3 col-sm-6 h6 mt-2 mb-5 text-center reason"><i class="fas fa-shield-alt"></i>Đặt phòng an toàn</div>
+        <div class="col col-lg-3 col-sm-6 h6 mt-2 mb-5 text-center reason"><i class="fas fa-cogs"></i>Quản lý phòng trực tuyến</div>
+        <div class="col col-lg-3 col-sm-6 h6 mt-2 mb-5 text-center reason"><i class="fas fa-comment-dots"></i>Nhân viên phục vụ tận tình</div>
     </div>
 
 

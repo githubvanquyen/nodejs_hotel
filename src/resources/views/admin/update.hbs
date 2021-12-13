@@ -1,0 +1,38 @@
+
+<div class="container mt-5">
+    <div class="container text-center mt-4"><h1>danh sách các phòng khách sạn</h1></div>
+    <table class="table table-striped text-center">
+    <thead>
+    <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Tên phòng</th>
+        <th scope="col">Diện tích</th>
+        <th scope="col">Ảnh</th>
+        <th scope="col">Các tiện ích</th>
+        <th scope="col">Giá</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each Rooms}}
+    <tr style="align-items:center">
+        <th scope="row">{{sum @index 1}}</th>
+        <td>{{this.typeRoom}}</td>
+        <td>{{this.areaRoom}} m<sup>2</sup></td>
+        <td><img src="http://localhost:3000/imgs/{{this.image}}" alt="" style=" width: 150px"></td>
+        <td>{{this.extension}}</td>
+        <td>{{this.price}}</td>
+        <td>
+            <button class="btn btn-primary"><a href="/admin/cap-nhat-phong/{{this.slug}}/cap-nhat">Sửa</a></button>
+            <button class="btn btn-danger"><a href="/admin/cap-nhat-phong/{{this.slug}}/xoa">Xóa</a></button>
+        </td>
+    </tr>
+    
+    {{/each}}
+ 
+    
+    </div>
+    </div>
+    </tbody>
+    </table>
+</div>

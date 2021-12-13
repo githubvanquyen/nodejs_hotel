@@ -1,0 +1,65 @@
+<div class="container pt-4">
+  <div class="row mt-3 mb-4">
+      <h2>Thông tin phòng</h2>
+  </div>
+  <form method="POST" enctype="multipart/form-data">
+    <div class="row ">
+      <div class="mb-3 col-lg-6 ">
+    <label for="name" class="form-label">Tên phòng</label>
+    <input type="text" class="form-control" id="name" name="typeRoom"  placeholder="{{roomDelete.typeRoom}}" >
+  </div>
+  <div class="mb-3 col-lg-6 ">
+    <div class="row">
+      <div class="col col-lg-3">
+        <img src="http://localhost:3000/imgs/{{roomDelete.image}}" alt="{{roomDelete.typeRoom}}" width="100%">
+      </div>
+      <div class="col col-lg-9">
+        <label for="image" class="form-label">ảnh phòng</label>
+        <input type="file" class="form-control" id="image" name="upload"  multiple="multiple" >
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+      <div class="mb-3 col-lg-6">
+      <label for="price" class="form-label">Giá phòng</label>
+      <input type="text" class="form-control" id="price" name="price"  placeholder="{{roomDelete.price}}"  >
+    </div>
+    <div class="mb-3 col-lg-6">
+      <label for="area" class="form-label">Diện tích phòng</label>
+      <input type="text" class="form-control" id="area" name="areaRoom"  placeholder="{{roomDelete.areaRoom}}" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col-lg-6">
+      <label for="description" class="form-label">Mô tả</label>
+      <textarea class="form-control" id="description" name="description"  placeholder="{{roomDelete.description}}" ></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col-lg-12">
+      <label for="exts" class="form-label">Tiện ích</label>
+      <input type="text" class="form-control" id="exts" name="extension"  placeholder="{{roomDelete.extension}}" >
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Xác nhận xóa</button>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xác thực xóa phòng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn chắc chắn muốn xóa phòng này ??
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" class="btn btn-danger">Đồng ý</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>

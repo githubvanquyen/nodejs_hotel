@@ -2,27 +2,27 @@
         <div class="header-nav">
             <ul class="nav-menu">
                 <li><a href="#"><i class="fas fa-bed"></i>Logo</a></li>
-                <li><a href="#rooms">Thêm khóa học</a></li>
-                <li><a href="#about">Cập nhật khóa học</a></li>
-                <li><a href="#contact">Xóa khóa học</a></li>
+                <li><a href="/admin/them-phong">Thêm phòng</a></li>
+                <li><a href="/admin/cap-nhat-phong">Danh sách khách sạn</a></li>
+                {{!-- <li><a href="/admin/xoa-phong">Xóa phòng</a></li> --}}
             </ul>
             <div class="nav-mobile"><i class="fas fa-bars"></i></div>
             <div class="moblie-menu">
                 <div class="btn-close"><i class="fas fa-times"></i></div>
                 <ul class="menu-mobi">
-                    <li><a href="#rooms" class="event-close">Thêm khóa học</a></li>
-                    <li><a href="#about" class="event-close">Cập nhật khóa học</a></li>
-                    <li><a href="#contact" class="event-close">Xóa khóa học</a></li>
+                    <li><a href="/admin/them-phong" class="event-close">Thêm phòng</a></li>
+                    <li><a href="/admin/cap-nhat-phong" class="event-close">Danh sách khách sạn</a></li>
+                    {{!-- <li><a href="/admin/xoa-phong" class="event-close">Xóa phòng</a></li> --}}
                 </ul>
             </div>
-            <div class="nav-select"><button class="btn-dn">Đăng xuất</button></div> 
+            <div class="nav-select"><a href="/">Đăng xuất</a></div> 
         </div>
         <!-- Button trigger modal -->
 
         <!-- Modal -->
-        <div id="modal-bg">
+        {{!-- <div id="modal-bg">
           <div class="modal-account">
-            <div class="account-heading">Đăng nhập (admin)</div>
+            <div class="account-heading">Đăng nhập</div>
             <div class="account-close"><i class="fas fa-times"></i></div>
           
           <div class="account-submit">
@@ -35,7 +35,7 @@
             </form>
           </div>
           </div>
-        </div>
+        </div> --}}
        
 </div>
 
