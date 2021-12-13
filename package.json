@@ -20,9 +20,9 @@
   "author": "vanquyen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/trangcongnghe/nodejs_hotel/issues"
+    "url": "https://github.com/githubvanquyen/nodejs_hotel/issues"
   },
-  "homepage": "https://github.com/trangcongnghe/nodejs_hotel#readme",
+  "homepage": "https://github.com/githubvanquyen/nodejs_hotel#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
