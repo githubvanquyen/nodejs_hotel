@@ -9,9 +9,12 @@ const mongoose = require('mongoose');
         console.log('connect failure!!!');
     }
 } */
-const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/hotel_dev ';
-mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
-    .then(() => console.log('MongoDB connected!'))
-    .catch(err => console.log('connect failure'));
+function connect(){
+    const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/hotel_dev ';
+    mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
+        .then(() => console.log('MongoDB connected!'))
+        .catch(err => console.log('connect failure'));
+
+}
 
 module.exports = {connect}
