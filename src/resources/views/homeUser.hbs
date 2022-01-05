@@ -38,25 +38,31 @@
         <p>"Làm cho bạn như ở nhà" là khẩu hiệu của chúng tôi. Chúng tôi cung cấp những trang thiết bị tót nhất đem lại trải nghiệm tốt nhất.</p>
     </div>
     <div class="row mb-4">
-        {{#each Rooms}}
+        {{#each Rooms as |room|}}
             <div class="col col-sm-12 col-12 col-lg-4 mt-4 mb-4">
+            
             <div class="card" style="width: 100%">
-            <img src="http://localhost:3000/imgs/{{this.image}}" class="card-img-top" alt="...">
+            <img src="http://localhost:3000/imgs/{{room.image}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <div class="row">
                     <div class="col col-10">
-                        <h4 class="card-title">{{this.typeRoom}}</h4>
-                        <p class="card-title">VND {{this.price}}</p>
+                        <h4 class="card-title" >{{room.typeRoom}}</h4>
+                        <p class="card-title">VND {{room.price}}</p>
                     </div>
                     <div class="col col-2">
-                        <p>{{this.areaRoom}} m<sup>2</sup></p>
+                        <p>{{room.areaRoom}} m<sup>2</sup></p>
                     </div>
                 </div>
-                <a href="/rooms/{{this.slug}}" class="btn btn-primary">Xem chi tiết</a><a href="#" class="btn btn-danger">Đặt ngay</a>
+                <a href="/rooms/{{room.slug}}" class="btn btn-primary">Xem chi tiết</a>
+                
+                <a href="/login?cartId={{../accountUser._id}}&name={{room.typeRoom}}&image={{room.image}}&price={{room.price}}" class="btn btn-danger btn-datphong" >Đặt ngay</a>
+               
             </div>
             </div>
+        
         </div>
         {{/each}}
+        {{!-- <form method="POST" id="submit-cart" ></form> --}}
     </div>
     <div class="row mb-4" id="about">
         <div class="col col-lg-6 col-sm-12 col-12">
@@ -148,4 +154,16 @@
     </div>
 
 </div>
+<script>
+    var submitCart = document.getElementById('submit-cart');
+    var btnDatphong = document.getElementById('btn-datphong');
+    
+    btnDatphong.onclick = function () {
+        submitCart.action= '/datphong/' + accountUser._id;
+        submitCart.submit()
+        var data = btnDatphong.getAttribute('data')
+        console.log(data)
+    } 
+    
+</script>
 

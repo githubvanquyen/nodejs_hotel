@@ -24,15 +24,51 @@
         <td>{{this.price}}</td>
         <td>
             <button class="btn btn-primary"><a href="/admin/cap-nhat-phong/{{this.slug}}/cap-nhat">Sửa</a></button>
-            <button class="btn btn-danger"><a href="/admin/cap-nhat-phong/{{this.slug}}/xoa">Xóa</a></button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#room-delete" data-bs-whatever="{{this._id}}">{{!-- <a href="/admin/cap-nhat-phong/{{this.slug}}/xoa">Xóa</a> --}}Xóa</button>
         </td>
     </tr>
     
     {{/each}}
- 
-    
     </div>
     </div>
     </tbody>
     </table>
+    
+        <div class="modal fade" id="room-delete" name="slug" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Xác thực xóa phòng</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Bạn chắc chắn muốn xóa phòng này ??
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button type="submit" id="btn-submit-room" class="btn btn-danger" >Đồng ý</button>
+            </div>
+        </div>
+        </div>
+        </div>
+        <form method="POST" id="delete-form"></form>
+    
 </div>
+<script>
+    var DeleteModal = document.getElementById('room-delete')
+    var roomId;
+    var deleteForm = document.getElementById('delete-form')
+    var btnSubmitRoom = document.getElementById('btn-submit-room');
+
+    DeleteModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget
+        roomId = button.getAttribute('data-bs-whatever')
+    })
+    
+    btnSubmitRoom.onclick = function () {
+        deleteForm.action= '/admin/cap-nhat-phong/'+roomId+'/xoa'
+        deleteForm.submit()
+    }
+
+    
+</script>

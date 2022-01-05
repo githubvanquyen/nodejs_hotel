@@ -5,7 +5,7 @@ const path = require('path')
 class AdminController{
 
     //GET /Account
-    index(req, res, next) {
+    /* index(req, res, next) {
         Account.findOne({name: req.body.name, password: req.body.password},(error, account) =>{
             if(error) return res.send('dăng nhập thất bại')
             else
@@ -23,7 +23,7 @@ class AdminController{
                     res.send('đăng nhập thất bại')
                 }
         })
-    }
+    } */
     create(req, res, next){
         /* const small = new Room(req.body);
         small.save(function (err) {
@@ -81,9 +81,9 @@ class AdminController{
     }
 
     //delete
-    delete(req,res,next){
+    /* delete(req,res,next){
         res.render('admin/delete',{Room,layout:'admin'})
-    }
+    } */
     updateItem(req,res,next){
         
         Room.findOne({slug: req.params.slug})
@@ -98,8 +98,8 @@ class AdminController{
         const form = formidable({ multiples: true ,uploadDir: path.join(__dirname,'../../public/imgs'), keepExtensions:true });
         form.parse(req, (err, fields, files) => {
             if (err) {
-            next(err);
-            return;
+                next(err);
+                return;
             }
             else{
                 
@@ -125,23 +125,23 @@ class AdminController{
     }
 
     // delete khách sạn
-    deleteItem(req,res,next){
+    /* deleteItem(req,res,next){
         Room.findOne({slug: req.params.slug})
             .then(roomDelete =>{
                 roomDelete = roomDelete.toObject();
                 res.render('admin/DeleteItem',{ roomDelete , layout: 'admin'})
             })
             .catch(next)
-    }
+    }*/
     deletedItem(req,res,next){
-        Room.deleteOne({slug: req.params.slug})
+        Room.deleteOne({_id: req.params._id})
             .then(()=>{
-                    res.redirect('/admin/cap-nhat-phong')
+                    res.redirect('back')
                 }
             )
             .catch(next)
         
-    }
+    } 
     
    
 }

@@ -1,0 +1,102 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col col-sm-6"><h4>Đơn hàng</h4></div>
+    </div>
+    <div class="row">
+        <table>
+            <thead style="border-bottom: 1px solid black; ">
+                <tr>
+                <th><input type="checkbox" id="checkbox-sum"></th>
+                <th>Tên phòng</th>
+                <th>ảnh phòng</th>
+                <th>đơn giá</th>
+                <th>thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each carts}}
+                <tr>
+                <th scope="row"><input type="checkbox" class="room-checkbox"></th>
+                <td>{{this.products.[0].name}}</td>
+                <td><img src="http://localhost:3000/imgs/{{this.products.[0].image}}" alt="" style=" width: 150px"></td>
+                <td id="cart-price">{{this.products.[0].price}}</td>
+                <td><a href="/cart/delete/{{this._id}}">Xóa</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+            </table>
+    </div>
+    <form class="row gy-2 gx-3 align-items-center" method="POST" >
+        <div class="row mt-5">
+            <div class="col col-sm-12 col-lg-6 col-12">
+                <label for="autoSizingInputGroup">thời gian</label>
+                <div class="input-group" id="autoSizingInputGroup">
+                    <div class="input-group-text">Nhận phòng</div>
+                    <input type="datetime-local" class="form-control" name="datein" id="datein" placeholder="Username">
+                    <div class="input-group-text">Trả phòng</div>
+                    <input type="datetime-local" class="form-control" name="dateout" id="dateout" placeholder="Username">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col col-sm-12 col-lg-6 col-12">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select class="form-select" id="autoSizingSelect" name="member">
+                <option selected>2 người lớn</option>
+                <option value="1">1 người lớn</option>
+                <option value="2">2 người lớn - 1 trẻ em</option>
+                <option value="3">Hộ gia đình</option>
+                <option value="4">Khác</option>
+                </select>
+            </div>
+        </div>
+    <div class="row mt-4">
+        <div class="col mb-3 col-lg-6">
+        <label for="phone" class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col mb-3 col-lg-6">
+        <label for="sum" class="form-label">tổng tiền </label>
+        <input type="text" class="form-control" id="sum" name="sumPrice" value="0" placeholder="tổng tiền">
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col col-sm-2-r "><button type="submit" class="btn btn-danger">Đặt phòng</button></div>
+    </div>
+    </form>
+</div>
+<script>
+    var checkboxSum = document.getElementById('checkbox-sum');
+    var roomCheckbox = document.querySelectorAll('.room-checkbox');
+    //console.log(checkboxSum.checked)
+    
+    checkboxSum.addEventListener('click' ,function(event){
+       roomCheckbox.forEach( (roomcheck) =>{
+           
+           roomcheck.checked = checkboxSum.checked
+       })
+    })
+
+    var dateOut = document.getElementById('dateout');
+    dateOut.addEventListener('change', function(event){
+
+        var dateIn = document.getElementById('datein').value;
+        var cartPrice = document.querySelector('#cart-price').textContent;
+        
+        var split_str = cartPrice.replace(/[^0-9]/g, '');
+        var price = parseInt(split_str)
+        //console.log(price)
+        var dateOuts = dateOut.value;
+        var dateIn = new Date(dateIn)
+        var dateOuts = new Date(dateOuts)
+ 
+        var sum = (dateOuts.getDate()- dateIn.getDate()) *(price)
+        var sumPrice = document.getElementById('sum')
+        console.log(sumPrice)
+        sumPrice.value = sum+' VND';
+        //console.log(sum)
+    })
+    
+</script>

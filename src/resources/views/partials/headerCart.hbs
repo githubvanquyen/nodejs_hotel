@@ -2,24 +2,27 @@
         <div class="header-nav">
             <ul class="nav-menu">
                 <li><a href="#"><i class="fas fa-bed"></i>Hanoi Central Hotel</a></li>
-                <li><a href="#rooms">Khách sạn</a></li>
-                <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
+                
             </ul>
-            <div class="nav-mobile"><i class="fas fa-bars"></i></div>
-            <div class="moblie-menu">
-                <div class="btn-close"><i class="fas fa-times"></i></div>
-                <ul class="menu-mobi">
-                    <li><a href="#rooms" class="event-close">Khách sạn</a></li>
-                    <li><a href="#about" class="event-close">Giới thiệu</a></li>
-                    <li><a href="#contact" class="event-close">Liên hệ</a></li>
-                </ul>
-            </div>
             
-            <div class="nav-select">
-              <button class="btn-dk">Đăng kí</button>
-              <button class="btn-dn">Đăng nhập</button>
-            </div> 
+            
+            
+            {{!-- <div class="nav-select">
+              
+            </div>  --}}
+            <div class="dropdown">
+              <div class="name-user">{{accountUser.name}}</div>
+              {{!-- <button class="btn btn-light " type="button" > --}}
+              <div class="account-dropdown">
+                <i class="fas fa-user account-user " id="dropdownMenuButton1" data-bs-toggle="dropdown"></i>
+                <div class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  {{!-- <li><a class="dropdown-item" href="#">Đơn hàng</a></li>
+                  <li><a class="dropdown-item" href="/order/{{accountUser._id}}">Hóa đơn</a></li> --}}
+                  <li><a class="dropdown-item" href="/">đăng xuất</a></li>
+                </ul>
+              </div>
+            </div>
         </div>
         <!-- Button trigger modal -->
 
@@ -31,9 +34,9 @@
             <div class="account-close"><i class="fas fa-times"></i></div>
           
           <div class="account-submit">
-            <form method="POST" action="\login">
+            <form method="POST" action="\admin">
               
-              <input type="text" id="name"name="email" placeholder="Email">
+              <input type="text" id="name"name="name" placeholder="Tên đăng nhập">
              
               <input type="password" id="pws" name="password"placeholder="Mật khẩu">
               <div class="forgotpsw"><a href="#"style="text-decoration: none">Quên mật khẩu?</a></div>
@@ -41,28 +44,6 @@
             </form>
           </div>
           </div>
-
-        </div>
-          {{!-- form đăng kí --}}   
-          <div id="modal-register">
-          <div class="modal-register col-lg-4 col-sm-10">
-            <div class="register-heading">Đăng kí</div>
-            <hr>
-            <div class="register-close"><i class="fas fa-times"></i></div>
-          
-          <div class="register-submit">
-            <form method="POST" action="">
-              <input type="text" id="name" name="name" placeholder="tên người dùng" required>
-
-              <input type="email" id="email" name="email" placeholder="Email" required>
-             
-              <input type="password" id="pws" name="password" placeholder="Mật khẩu" required>
-              
-              <button type="submit" class= "btn  register-btn">Đăng kí</button>
-            </form>
-          </div>
-          </div>
-
         </div>
        
 </div>

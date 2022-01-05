@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(236, 236, 236);
 }
 
 .container{
@@ -19,11 +19,13 @@ body{
 
 .header{
     width: 100%;
+    
 }
 
 .header-nav{
     width: 100%;
     height: 44px;
+    padding: 0px 12px;
     display: flex;
     background-color: white;
     position: fixed;
@@ -96,7 +98,7 @@ body{
     color:#fff
 }
 .btn-dn:hover{
-    opacity: 0.6;
+    opacity: 0.9;
 }
 /* .header-img{
     width: 100%;
@@ -368,7 +370,7 @@ body{
 .img-right{
     width: 100%;
 }
-
+*/
 .about-contact{
     width: 100%;
     padding: 16px 0px;
@@ -401,7 +403,7 @@ body{
     background-color: #ff5722;
     margin-right: 16px;
 }
-
+/*
 .place-img{
     width: 100%;
     display: flex;
@@ -487,7 +489,7 @@ body{
 .subcribe-btn button:hover{
     background-color: #ccc;
     color: black;
-}
+}*/
 
 .section-contact{
     width: 100%;
@@ -531,7 +533,7 @@ body{
     color: black;
     background-color: #ccc;
 }
-*/
+
 
 .footer{
     width: 100%;
@@ -772,7 +774,7 @@ button:hover, .submit-btn:hover{
 
 .modal-account{
     position: relative;
-    height: min-content;
+    height: max-content;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -783,18 +785,22 @@ button:hover, .submit-btn:hover{
 .account-heading{
     width: 100%;
     font-size: 30px;
-    color: #fff;
-    background-color: #f44336;
     text-align: center;
     line-height: 50px;
     border-radius: 5px 5px 0px  0px;
 }
 
 .account-btn{
+    background-color: #f44336;
+    color: #fff;
     width: 100%;
 }
 .account-btn >a{
     text-decoration: none;
+    color: #fff;
+}
+.account-btn:hover{
+    opacity: 0.9;
     color: #fff;
 }
 
@@ -815,10 +821,79 @@ button:hover, .submit-btn:hover{
 .account-submit  input{
     width: 100%;
     margin-bottom: 16px;
+    margin-top: 8px;
     padding: 4px 16px;
     font-size: 18px;
     border: 1px solid gray;
 }
+// dăng kí
+#modal-register{
+    display: none;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0, 0, 0.5);
+    z-index: 2;
+}
+
+.modal-register{
+    position: relative;
+    height: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.register-heading{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px 5px 0px  0px;
+}
+
+.register-btn{
+    background-color: #f44336;
+    color: #fff;
+    width: 100%;
+}
+.register-btn >a{
+    text-decoration: none;
+    color: #fff;
+}
+.register-btn:hover{
+    opacity: 0.9;
+    color: #fff;
+}
+
+.register-close{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.register-close:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.register-submit{
+    padding: 8px;
+}
+
+.register-submit  input{
+    width: 100%;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    padding: 4px 16px;
+    font-size: 18px;
+    border: 1px solid gray;
+}
+//
 .btn> a{
     color: white;
     text-decoration: none;
@@ -828,11 +903,50 @@ button:hover, .submit-btn:hover{
     color: white;
 }
 .reason> i{
-    font-size: 30px;
+    font-size: 25px;
     color: #45a4f7;
     margin-right: 1rem;
 }
 .form-dkn{
-    box-shadow:  0px 4px 8px 0px rgba(0, 0, 0, 0.2)
+    box-shadow:  0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+.forgotpsw{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px 0 16px 0;
+    display: flex;
+
+}
+.account-dropdown{
+    display: flex;
+    
+}
+.dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account-user{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f44336;
+    line-height: 35px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+
+}
+.btn-active:active{
+    border: none;
+}
+.name-user{
+    margin-right: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    
 }
 

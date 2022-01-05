@@ -7,7 +7,7 @@ html {
   font-family: Arial, Helvetica, sans-serif; }
 
 body {
-  background-color: #f7f7f7; }
+  background-color: #ececec; }
 
 .container {
   width: 100%;
@@ -19,6 +19,7 @@ body {
 .header-nav {
   width: 100%;
   height: 44px;
+  padding: 0px 12px;
   display: flex;
   background-color: white;
   position: fixed;
@@ -84,7 +85,7 @@ body {
   color: #fff; }
 
 .btn-dn:hover {
-  opacity: 0.6; }
+  opacity: 0.9; }
 
 /* .header-img{
     width: 100%;
@@ -356,40 +357,36 @@ body {
 .img-right{
     width: 100%;
 }
+*/
+.about-contact {
+  width: 100%;
+  padding: 16px 0px;
+  display: flex; }
 
-.about-contact{
-    width: 100%;
-    padding: 16px 0px;
-    display: flex;
-}
+.contacr-items {
+  width: 33.333%;
+  text-align: center;
+  justify-content: space-around; }
 
-.contacr-items{
-    width: 33.333%;
-    text-align: center;
-    justify-content: space-around;
-}
+.contacr-items i {
+  color: #f44336; }
 
-.contacr-items i{
-    color: #f44336;
-}
+.section-note {
+  width: 100%;
+  padding: 32px 16px;
+  margin: 16px 0px;
+  color: #fff;
+  background-color: #f44336;
+  display: flex;
+  align-items: center; }
 
-.section-note{
-    width: 100%;
-    padding: 32px 16px;   
-    margin: 16px 0px;
-    color: #fff;
-    background-color: #f44336;
-    display: flex;
-    align-items: center;
-}
+.note-icon {
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #ff5722;
+  margin-right: 16px; }
 
-.note-icon{
-    padding: 8px 16px;
-    color: #fff;
-    background-color: #ff5722;
-    margin-right: 16px;
-}
-
+/*
 .place-img{
     width: 100%;
     display: flex;
@@ -475,51 +472,43 @@ body {
 .subcribe-btn button:hover{
     background-color: #ccc;
     color: black;
-}
+}*/
+.section-contact {
+  width: 100%;
+  padding: 16px; }
 
-.section-contact{
-    width: 100%;
-    padding: 16px;
-}
+.contact-head {
+  font-size: 24px;
+  padding: 16px 0px; }
 
-.contact-head{
-    font-size: 24px;
-    padding: 16px 0px;
-}
+.contact-decript {
+  padding: 16px 0px; }
 
-.contact-decript{
-    padding: 16px 0px;
-}
+.contact-items {
+  padding: 8px 0px; }
 
-.contact-items{
-    padding: 8px 0px;
-}
+.contact-items i {
+  color: #f44336;
+  margin-right: 8px; }
 
-.contact-items i{
-    color: #f44336;
-    margin-right: 8px;
-}
+.user-contact {
+  width: 100%;
+  padding: 16px;
+  margin: 4px 0px;
+  border: 1px solid #ccc; }
 
-.user-contact{
-    width: 100%;
-    padding: 16px;
-    margin: 4px 0px;
-    border: 1px solid #ccc;
-}
-.sendmess{
-    margin: 8px 0px;
-    text-transform: uppercase;
-    padding:16px;
-    color:#fff;
-    background-color: black;
-    border: none;
-}
+.sendmess {
+  margin: 8px 0px;
+  text-transform: uppercase;
+  padding: 16px;
+  color: #fff;
+  background-color: black;
+  border: none; }
 
-.sendmess:hover{
-    color: black;
-    background-color: #ccc;
-}
-*/
+.sendmess:hover {
+  color: black;
+  background-color: #ccc; }
+
 .footer {
   width: 100%;
   padding: 16px;
@@ -684,7 +673,7 @@ button:hover, .submit-btn:hover {
 
 .modal-account {
   position: relative;
-  height: min-content;
+  height: max-content;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -694,17 +683,21 @@ button:hover, .submit-btn:hover {
 .account-heading {
   width: 100%;
   font-size: 30px;
-  color: #fff;
-  background-color: #f44336;
   text-align: center;
   line-height: 50px;
   border-radius: 5px 5px 0px  0px; }
 
 .account-btn {
+  background-color: #f44336;
+  color: #fff;
   width: 100%; }
 
 .account-btn > a {
   text-decoration: none;
+  color: #fff; }
+
+.account-btn:hover {
+  opacity: 0.9;
   color: #fff; }
 
 .account-close {
@@ -722,6 +715,67 @@ button:hover, .submit-btn:hover {
 .account-submit input {
   width: 100%;
   margin-bottom: 16px;
+  margin-top: 8px;
+  padding: 4px 16px;
+  font-size: 18px;
+  border: 1px solid gray; }
+
+#modal-register {
+  display: none;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2; }
+
+.modal-register {
+  position: relative;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px; }
+
+.register-heading {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px 5px 0px  0px; }
+
+.register-btn {
+  background-color: #f44336;
+  color: #fff;
+  width: 100%; }
+
+.register-btn > a {
+  text-decoration: none;
+  color: #fff; }
+
+.register-btn:hover {
+  opacity: 0.9;
+  color: #fff; }
+
+.register-close {
+  position: absolute;
+  top: 8px;
+  right: 16px; }
+
+.register-close:hover {
+  color: #fff;
+  cursor: pointer; }
+
+.register-submit {
+  padding: 8px; }
+
+.register-submit input {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 8px;
   padding: 4px 16px;
   font-size: 18px;
   border: 1px solid gray; }
@@ -735,9 +789,44 @@ button:hover, .submit-btn:hover {
   color: white; }
 
 .reason > i {
-  font-size: 30px;
+  font-size: 25px;
   color: #45a4f7;
   margin-right: 1rem; }
 
 .form-dkn {
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  border-radius: 5px; }
+
+.forgotpsw {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px 0 16px 0;
+  display: flex; }
+
+.account-dropdown {
+  display: flex; }
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.account-user {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f44336;
+  line-height: 35px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center; }
+
+.btn-active:active {
+  border: none; }
+
+.name-user {
+  margin-right: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex; }
