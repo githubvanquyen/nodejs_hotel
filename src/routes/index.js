@@ -11,7 +11,7 @@ function route(app) {
     app.use('/account',accountRouter)
     app.use('/user',userRouter)
     app.use('/admin',adminRouter)
-    /* app.use('/login',loginRouter) */
+    app.use('/login',loginRouter)
     app.use('/',siteRouter)
 }
 
